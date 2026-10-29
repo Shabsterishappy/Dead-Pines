@@ -1887,7 +1887,8 @@ kbd {
     rare: { label: 'Rare', color: '#58a8ff' },
     epic: { label: 'Epic', color: '#b97bff' },
     mythic: { label: 'Mythic', color: '#ff5c7c' },
-    legendary: { label: 'Legendary', color: '#ffc233' }
+    legendary: { label: 'Legendary', color: '#ffc233' },
+    unique: { label: 'Unique', color: '#404040' }
   };
   function dot(c, x, y, r, f) { c.fillStyle = f; c.beginPath(); c.arc(x, y, r, 0, 6.2832); c.fill(); }
   function ell(c, x, y, rx, ry, f, rot) { c.fillStyle = f; c.beginPath(); c.ellipse(x, y, rx, ry, rot || 0, 0, 6.2832); c.fill(); }
@@ -1895,6 +1896,14 @@ kbd {
   function seg(c, x1, y1, x2, y2, col, w) { c.strokeStyle = col; c.lineWidth = w; c.lineCap = 'round'; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke(); }
 
   var SKINS = [
+       { id: 'herobrine', name: 'Herobrine', rarity: 'Unique', price: 2000, upright: true, draw: function (c, t, R, o) {
+      dot(c, 0, 0, R, '#b8d4d7');
+      c.fillStyle = '#3c302b'; c.fillRect(-R + 1, -R + 1, (R * 2) - 2, 3.2);
+      var ex = o.fx * 1.4, ey = o.fy * 1.4;
+      c.fillStyle = '#8eefff'; c.fillRect(-4 + ex, -2.2 + ey, 3, 1.8); c.fillRect(1 + ex, -2.2 + ey, 3, 1.8);
+      c.fillStyle = '#ffffff'; c.fillRect(-3.8 + ex, -2 + ey, 1.2, 1.2); c.fillRect(1.2 + ex, -2 + ey, 1.2, 1.2);
+      c.fillStyle = '#3c302b'; c.fillRect(-2.5, 4.2, 5, 1.5);
+    } },
     { id: 'survivor', name: 'Survivor', rarity: 'default', price: 0, upright: false, draw: function (c, t, R) {
       dot(c, 0, 0, R, '#3d5a80'); dot(c, 2, 0, 6, '#e8c9a0');
       c.fillStyle = '#2a2018'; c.beginPath(); c.arc(1, 0, 6, Math.PI * 0.55, Math.PI * 1.45); c.fill();
