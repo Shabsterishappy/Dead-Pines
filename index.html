@@ -1896,7 +1896,7 @@ kbd {
   function seg(c, x1, y1, x2, y2, col, w) { c.strokeStyle = col; c.lineWidth = w; c.lineCap = 'round'; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke(); }
 
   var SKINS = [
-       { id: 'herobrine', name: 'Herobrine', rarity: 'Unique', price: 2000, upright: true, draw: function (c, t, R, o) {
+       { id: 'herobrine', name: 'Herobrine', rarity: 'unique', price: 2000, upright: true, draw: function (c, t, R, o) {
       dot(c, 0, 0, R, '#b8d4d7');
       c.fillStyle = '#3c302b'; c.fillRect(-R + 1, -R + 1, (R * 2) - 2, 3.2);
       var ex = o.fx * 1.4, ey = o.fy * 1.4;
