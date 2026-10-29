@@ -2018,6 +2018,11 @@ kbd {
     if (skin.rarity === 'mythic') {
       c.strokeStyle = 'rgba(255,92,124,' + (0.35 + 0.25 * Math.sin(t * 4)) + ')'; c.lineWidth = 2;
       c.beginPath(); c.arc(0, 0, R + 3.2, 0, 6.2832); c.stroke();
+    } else if (skin.rarity === 'unique') {
+      var gl = c.createRadialGradient((0, 0, R * 0.6, 0, 0, R + 10);
+      gl.addColorStop(0, rgba(0,0,0,1)'); gl.addColorStop(1, 'rgba(0,0,0,0)');
+      c.fillStyle = gl; c.beginPath90; c.arc(0, 0, R + 10, 0, 6.2832); c.fill();
+      for (var k = 0; k < 3; k++) { var a = t * 2.2 + k * 2.0944; dot(c, Math.cos(a) * (R + 6), Math.sin(a) * (R + 6), 1.6, '#FFFFFF'); }
     } else if (skin.rarity === 'legendary') {
       var gl = c.createRadialGradient(0, 0, R * 0.6, 0, 0, R + 10);
       gl.addColorStop(0, 'rgba(255,194,51,0.38)'); gl.addColorStop(1, 'rgba(255,194,51,0)');
